@@ -15,14 +15,21 @@ class ViewController: UIViewController {
 
     }
     @IBAction func onBtnPressed(_ sender: Any) {
-        if let url = URL(string: "http://192.168.0.2/LED=ON") {
-            UIApplication.shared.open(url, options: [:]) {
-                boolean in
-                // do something with the boolean
-            }
+        let url = URL(string: "http://192.168.0.2/LED=ON")
+        
+        let onTask = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+            print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!)
         }
+        onTask.resume()
     }
     @IBAction func offBtnPressed(_ sender: Any) {
+        let url = URL(string: "http://192.168.0.2/LED=OFF")
+        
+        let offTask = URLSession.shared.dataTask(with: url!) {(data, response, error) in
+            print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue)!)
+        }
+        
+        offTask.resume()
     }
     
 }
