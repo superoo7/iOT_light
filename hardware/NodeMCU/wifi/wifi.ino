@@ -90,19 +90,14 @@ void startServer() {
   client.println("Content-Type: text/html");
   client.println(""); //  do not forget this one
   client.println("<!DOCTYPE HTML>");
-  client.println("<html><head><title>On/Off LED</title><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\"><script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script></head><div class=\"container row col-md-12 col-xs-12\"><h1 class=\"text-center\">");
-
-  client.print("Led pin is now: ");
+  client.println("<html><head><title>On/Off LED</title><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\"><script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script></head><body class=\"container\"><h1 class=\"text-center\">Led pin is now: ");
 
   if(value == HIGH) {
     client.print("On");
   } else {
     client.print("Off");
   }
-  client.println("</h1></div class=\"text-center col-md-12 col-xs-12\"><br><br>");
-  client.println("<a class=\"text-center\" href=\"/LED=ON\"\"><button type=\"button\" class=\"btn btn-lg btn-success\">Turn On </button></a>");
-  client.println("<a class=\"text-center\" href=\"/LED=OFF\"\"><button type=\"button\" class=\"btn btn-lg btn-danger\">Turn Off </button></a><br />");
-  client.println("</html>");
+  client.println("</h1></div class=\"text-center col-lg-12 col-md-12 col-xs-12\"><br /><a class=\"text-center col-lg-12 col-md-12 col-xs-12\" href=\"/LED=ON\"><button type=\"button\" class=\"col-lg-12 col-md-12 col-xs-12 btn btn-lg btn-success\">Turn On</button></a><br><br><br /><br /><a class=\"text-center col-lg-12 col-md-12 col-xs-12\" href=\"/LED=OFF\"><button type=\"button\" class=\"col-lg-12 col-md-12 col-xs-12 btn btn-lg btn-danger\">Turn Off</button></a></body></html>");
 
   delay(1);
   Serial.println("Client disonnected");
