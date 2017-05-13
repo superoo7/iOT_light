@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,63 +18,64 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="YFX-zi-wLD">
-                                <rect key="frame" x="30" y="50" width="708" height="944"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVj-0F-V7S">
-                                        <rect key="frame" x="226" y="0.0" width="256" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOT Light Bulb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SS-c0-BIN">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="43"/>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="35"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pG2-tV-0jn">
-                                        <rect key="frame" x="10" y="83" width="688" height="861"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjT-ms-AOM">
-                                                <rect key="frame" x="0.0" y="410" width="329" height="41"/>
-                                                <color key="backgroundColor" red="0.0039215686269999999" green="0.76078431369999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
-                                                <state key="normal" title="ON">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-ns-TzS">
-                                                <rect key="frame" x="359" y="410" width="329" height="41"/>
-                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
-                                                <state key="normal" title="OFF">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOT light bulb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImA-p7-0L2">
+                                <rect key="frame" x="92.666666666666686" y="50" width="228.66666666666663" height="43"/>
                                 <constraints>
-                                    <constraint firstItem="pG2-tV-0jn" firstAttribute="leading" secondItem="YFX-zi-wLD" secondAttribute="leading" constant="10" id="Ihd-FN-OyX"/>
-                                    <constraint firstAttribute="trailing" secondItem="pG2-tV-0jn" secondAttribute="trailing" constant="10" id="hP6-xl-cqI"/>
+                                    <constraint firstAttribute="height" constant="43" id="CL6-Xu-XTI"/>
+                                    <constraint firstAttribute="width" constant="228.66999999999999" id="Vsk-a4-GPk"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ2-tG-iAs">
+                                <rect key="frame" x="92.666666666666686" y="113" width="228.66666666666663" height="64"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.76078431369999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="yiJ-eU-kqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="43"/>
+                                <state key="normal" title="ON">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BaC-DS-lea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgM-aq-KWG">
+                                <rect key="frame" x="93" y="207" width="228.66666666666669" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="GLF-Ho-PYJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="43"/>
+                                <state key="normal" title="OFF">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="offBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqa-4T-9Ih"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YFX-zi-wLD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="D5n-6C-9fQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YFX-zi-wLD" secondAttribute="trailing" constant="10" id="LFF-Mf-Vkh"/>
-                            <constraint firstItem="YFX-zi-wLD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="eZG-aC-V8I"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YFX-zi-wLD" secondAttribute="bottom" constant="30" id="iYB-Ur-PrQ"/>
+                            <constraint firstItem="ImA-p7-0L2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Vn-Qp-sKh"/>
+                            <constraint firstItem="QgM-aq-KWG" firstAttribute="leading" secondItem="BJ2-tG-iAs" secondAttribute="leading" id="26w-Fq-N8y"/>
+                            <constraint firstItem="ImA-p7-0L2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="3M4-cI-olO"/>
+                            <constraint firstItem="QgM-aq-KWG" firstAttribute="top" secondItem="BJ2-tG-iAs" secondAttribute="bottom" constant="30" id="Dj0-1e-Onz"/>
+                            <constraint firstItem="BJ2-tG-iAs" firstAttribute="top" secondItem="ImA-p7-0L2" secondAttribute="bottom" constant="20" id="Tc3-Jj-dVF"/>
+                            <constraint firstItem="BJ2-tG-iAs" firstAttribute="leading" secondItem="ImA-p7-0L2" secondAttribute="leading" id="ZcH-3g-PJ0"/>
+                            <constraint firstItem="QgM-aq-KWG" firstAttribute="trailing" secondItem="BJ2-tG-iAs" secondAttribute="trailing" id="pOd-BB-3hq"/>
+                            <constraint firstItem="BJ2-tG-iAs" firstAttribute="trailing" secondItem="ImA-p7-0L2" secondAttribute="trailing" id="zDX-qI-7SV"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="117.39130434782609" y="122.28260869565219"/>
         </scene>
     </scenes>
 </document>
