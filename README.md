@@ -3,6 +3,8 @@
 * current stage planning to make localhost first
 * sending get request to control the bulb
 
+__Detailed guide coming soon__
+
 ## Materials
 * Light bulb (4.5V)
 * nodeMCU
