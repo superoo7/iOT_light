@@ -1,9 +1,11 @@
+![iOT light bulb icon](./images/iOT-lights.png) 
 # iOT light bulb
+
 * A lightbulb that are able to control using iOS application or web (DONE)
 * current stage planning to make localhost first
 * sending get request to control the bulb
 
-__Detailed guide coming soon__
+**_Detailed guide coming soon_**
 
 ## Materials
 * Light bulb (4.5V)
@@ -21,6 +23,8 @@ __Detailed guide coming soon__
 ## Done
 * Website that is responsive
 * iOS App 
+
+<img src="./images/ipad-preview.png" width="500%" height="500%" />
 
 ## To Do
 * create thingspeak API to control lights via internet
