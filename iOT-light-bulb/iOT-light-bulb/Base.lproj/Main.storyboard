@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,64 +18,113 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOT light bulb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImA-p7-0L2">
-                                <rect key="frame" x="92.666666666666686" y="50" width="228.66666666666663" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="CL6-Xu-XTI"/>
-                                    <constraint firstAttribute="width" constant="228.66999999999999" id="Vsk-a4-GPk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ2-tG-iAs">
-                                <rect key="frame" x="92.666666666666686" y="113" width="228.66666666666663" height="64"/>
-                                <color key="backgroundColor" red="0.0039215686269999999" green="0.76078431369999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="yiJ-eU-kqK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="43"/>
-                                <state key="normal" title="ON">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BaC-DS-lea"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgM-aq-KWG">
-                                <rect key="frame" x="93" y="207" width="228.66666666666669" height="64"/>
-                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="GLF-Ho-PYJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="43"/>
-                                <state key="normal" title="OFF">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="offBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqa-4T-9Ih"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-Yh-9cu">
+                                <rect key="frame" x="5" y="50" width="310" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rap-1S-QeU">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="63.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOT light bulb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImA-p7-0L2">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="63.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="42"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4QT-zr-8d3">
+                                        <rect key="frame" x="0.0" y="66.5" width="310" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjk-BA-vfn">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="88" id="LWM-hz-UrZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter URL ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-Tj-CYG">
+                                                <rect key="frame" x="92" y="0.0" width="218" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="lhi-re-xvR"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uN-SO-Cp1">
+                                        <rect key="frame" x="0.0" y="139.5" width="310" height="144.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iOT-lights" translatesAutoresizingMaskIntoConstraints="NO" id="nEF-eM-TUG">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="144.5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNA-5p-IRv">
+                                        <rect key="frame" x="0.0" y="287" width="310" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJ2-tG-iAs">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="55"/>
+                                                <color key="backgroundColor" red="0.0039215686269999999" green="0.76078431369999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="WoR-ql-HDm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="43"/>
+                                                <state key="normal" title="ON">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BaC-DS-lea"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkz-EB-VMv">
+                                        <rect key="frame" x="0.0" y="345" width="310" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgM-aq-KWG">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="55"/>
+                                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="X5G-Aq-nar"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="43"/>
+                                                <state key="normal" title="OFF">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="offBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqa-4T-9Ih"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ImA-p7-0L2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Vn-Qp-sKh"/>
-                            <constraint firstItem="QgM-aq-KWG" firstAttribute="leading" secondItem="BJ2-tG-iAs" secondAttribute="leading" id="26w-Fq-N8y"/>
-                            <constraint firstItem="ImA-p7-0L2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="3M4-cI-olO"/>
-                            <constraint firstItem="QgM-aq-KWG" firstAttribute="top" secondItem="BJ2-tG-iAs" secondAttribute="bottom" constant="30" id="Dj0-1e-Onz"/>
-                            <constraint firstItem="BJ2-tG-iAs" firstAttribute="top" secondItem="ImA-p7-0L2" secondAttribute="bottom" constant="20" id="Tc3-Jj-dVF"/>
-                            <constraint firstItem="BJ2-tG-iAs" firstAttribute="leading" secondItem="ImA-p7-0L2" secondAttribute="leading" id="ZcH-3g-PJ0"/>
-                            <constraint firstItem="QgM-aq-KWG" firstAttribute="trailing" secondItem="BJ2-tG-iAs" secondAttribute="trailing" id="pOd-BB-3hq"/>
-                            <constraint firstItem="BJ2-tG-iAs" firstAttribute="trailing" secondItem="ImA-p7-0L2" secondAttribute="trailing" id="zDX-qI-7SV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jjX-Yh-9cu" secondAttribute="bottom" constant="30" id="Lya-yJ-UWF"/>
+                            <constraint firstItem="jjX-Yh-9cu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Ue5-Qf-P7c"/>
+                            <constraint firstItem="jjX-Yh-9cu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="kVf-SX-qmi"/>
+                            <constraint firstAttribute="trailing" secondItem="jjX-Yh-9cu" secondAttribute="trailing" constant="5" id="wLU-Hw-pwu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="urlTextField" destination="ZMa-Tj-CYG" id="NEB-fN-hWY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.39130434782609" y="122.28260869565219"/>
+            <point key="canvasLocation" x="116.25" y="121.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iOT-lights" width="76" height="76"/>
+    </resources>
 </document>

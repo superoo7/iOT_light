@@ -9,11 +9,15 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
-    var websiteUrl = "http://192.168.0.15"
+class ViewController: UIViewController, UITextFieldDelegate  {
+    var websiteUrl: String? = "http://192.168.0.2"
     var btnSound: AVAudioPlayer!
+    
+    @IBOutlet weak var urlTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        urlTextField.delegate = self
         let path = Bundle.main.path(forResource: "btn", ofType: "wav")
         let soundURL = URL(fileURLWithPath: path!)
         do {
@@ -27,7 +31,7 @@ class ViewController: UIViewController {
     }
     @IBAction func onBtnPressed(_ sender: Any) {
         playSound()
-        let url = URL(string: "\(websiteUrl)/LED=ON")
+        let url = URL(string: "\(websiteUrl!)/LED=ON")
         
         let onTask = URLSession.shared.dataTask(with: url!) {
             (data, response, error) in
@@ -38,7 +42,7 @@ class ViewController: UIViewController {
     }
     @IBAction func offBtnPressed(_ sender: Any) {
         playSound()
-        let url = URL(string: "\(websiteUrl)/LED=OFF")
+        let url = URL(string: "\(websiteUrl!)/LED=OFF")
         
         let offTask = URLSession.shared.dataTask(with: url!) {
             (data, response, error) in
@@ -48,6 +52,16 @@ class ViewController: UIViewController {
         
         offTask.resume()
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        websiteUrl = textField.text
+
+    }
+    
+    
     func playSound() {
         if btnSound.isPlaying {
             btnSound.stop()
