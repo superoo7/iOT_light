@@ -1,5 +1,6 @@
 ![iOT light bulb icon](./images/iOT-lights.png) 
 # iOT light bulb
+[![BCH compliance](https://bettercodehub.com/edge/badge/superoo7/iOT_light?branch=master)](https://bettercodehub.com/)
 
 * A lightbulb that are able to control using iOS application or web (DONE)
 * current stage planning to make localhost first

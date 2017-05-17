@@ -38,17 +38,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4QT-zr-8d3">
                                         <rect key="frame" x="0.0" y="66.5" width="310" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjk-BA-vfn">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="70"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL: http://192.168." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjk-BA-vfn">
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="70"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="88" id="LWM-hz-UrZ"/>
+                                                    <constraint firstAttribute="width" constant="137" id="yAE-yZ-r07"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter URL ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-Tj-CYG">
-                                                <rect key="frame" x="92" y="0.0" width="218" height="70"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Value ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-Tj-CYG">
+                                                <rect key="frame" x="141" y="0.0" width="169" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="lhi-re-xvR"/>
                                                 </constraints>

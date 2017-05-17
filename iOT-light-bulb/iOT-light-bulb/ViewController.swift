@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, UITextFieldDelegate  {
-    var websiteUrl: String? = "http://192.168.0.2"
+    var websiteUrl: String? = "0.2"
     var btnSound: AVAudioPlayer!
     
     @IBOutlet weak var urlTextField: UITextField!
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate  {
     }
     @IBAction func onBtnPressed(_ sender: Any) {
         playSound()
-        let url = URL(string: "\(websiteUrl!)/LED=ON")
+        let url = URL(string: "http://192.168.\(websiteUrl!)/LED=ON")
         
         let onTask = URLSession.shared.dataTask(with: url!) {
             (data, response, error) in
@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate  {
     }
     @IBAction func offBtnPressed(_ sender: Any) {
         playSound()
-        let url = URL(string: "\(websiteUrl!)/LED=OFF")
+        let url = URL(string: "http://192.168.\(websiteUrl!)/LED=OFF")
         
         let offTask = URLSession.shared.dataTask(with: url!) {
             (data, response, error) in

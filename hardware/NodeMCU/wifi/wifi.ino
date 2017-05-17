@@ -1,10 +1,10 @@
 #include "ESP8266WiFi.h"
 
 // WiFI WPA2
-const char* ssid = "";      // ssid
-const char* password = "";  // password
+const char* ssid = "gurav03";      // ssid
+const char* password = "asd1234512345";  // password
 
-int ledPin = 13; // GPIO13
+int ledPin = 5; // GPIO13
 WiFiServer server(80);
 
 void wifiSetup();
@@ -74,11 +74,11 @@ void startServer() {
 
   int value = LOW;
   if (request.indexOf("/LED=ON") != -1)  {
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin, LOW);
     value = HIGH;
   }
   if (request.indexOf("/LED=OFF") != -1)  {
-    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin, HIGH);
     value = LOW;
   }
 
